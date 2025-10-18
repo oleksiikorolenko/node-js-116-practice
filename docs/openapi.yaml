@@ -8,12 +8,14 @@ info:
   description: >
     <опис вашого додатку>
 tags:
-  # теги, що ви будете використовувати
+  - name: Products
+    description: Operation with products
 servers:
   - url: http://localhost:3000
-  - url: #посилання на задеплоєний сайт
 paths:
-  # тут будуть посилання на ендпоінти
+  /products:
+    get:
+      $ref: '../swagger/paths/products/get.yaml'
 components:
   securitySchemes:
     bearerAuth:
